@@ -1,0 +1,219 @@
+id,departamento,distrito,zona_id,pct_area,biotemperatura,P_anual,ETP_anual,razao_ETP
+PRY.1.1_1,Alto Paraguay,Fuerte Olimpo,28,96.92,20.25,1083.01,1193.2,1.1
+PRY.1.2_1,Alto Paraguay,La Victoria,29,50.09,20.03,1180.32,1180.64,1.01
+PRY.1.3_1,Alto Paraguay,Mayor Pablo Lagerenza,28,100.0,20.01,941.14,1179.46,1.26
+PRY.2.1_1,Alto Paraná,Ciudad del Este,29,100.0,21.26,1793.69,1252.62,0.7
+PRY.2.2_1,Alto Paraná,Doctor Juan León Mallorquín,29,100.0,21.29,1752.27,1254.57,0.72
+PRY.2.3_1,Alto Paraná,Domingo Martínez de Irala,29,100.0,21.16,1837.51,1246.97,0.68
+PRY.2.4_1,Alto Paraná,Hernandarias,29,100.0,21.38,1749.53,1259.66,0.72
+PRY.2.5_1,Alto Paraná,Itakyry,29,100.0,21.59,1668.76,1272.14,0.76
+PRY.2.6_1,Alto Paraná,Juan Emilio O'Leary,29,100.0,21.29,1753.12,1254.79,0.72
+PRY.2.7_1,Alto Paraná,Los Cedrales,29,100.0,21.22,1827.35,1250.43,0.69
+PRY.2.8_1,Alto Paraná,Mbaracayú,29,100.0,21.5,1783.83,1266.89,0.71
+PRY.2.9_1,Alto Paraná,Minga Guazú,29,100.0,21.28,1792.48,1253.87,0.7
+PRY.2.10_1,Alto Paraná,Minga Porá,29,100.0,21.62,1759.06,1273.99,0.73
+PRY.2.11_1,Alto Paraná,Ñacunday,29,100.0,20.96,1865.69,1235.21,0.66
+PRY.2.12_1,Alto Paraná,Naranjal,29,100.0,20.95,1831.87,1234.33,0.68
+PRY.2.13_1,Alto Paraná,Presidente Franco,29,100.0,21.25,1758.11,1252.01,0.71
+PRY.2.14_1,Alto Paraná,San Alberto,29,100.0,21.58,1704.54,1271.95,0.75
+PRY.2.15_1,Alto Paraná,San Cristóbal,29,100.0,21.1,1813.76,1243.31,0.69
+PRY.2.16_1,Alto Paraná,Santa Rita,29,100.0,21.13,1830.05,1245.47,0.68
+PRY.2.17_1,Alto Paraná,Santa Rosa del Monday,29,100.0,21.16,1791.13,1247.08,0.7
+PRY.2.18_1,Alto Paraná,Yguazú,29,100.0,21.32,1757.86,1256.17,0.72
+PRY.3.1_1,Amambay,Bella Vista,29,100.0,21.94,1613.06,1292.72,0.8
+PRY.3.2_1,Amambay,Capitán Bado,29,100.0,22.02,1686.35,1297.51,0.77
+PRY.3.3_1,Amambay,Pedro Juan Caballero,29,100.0,22.19,1729.1,1307.47,0.76
+PRY.4.1_1,Asunción,Asunción,29,100.0,20.6,1465.22,1214.04,0.83
+PRY.5.1_1,Boquerón,Doctor Pedro P. Peña,28,100.0,19.55,755.64,1152.31,1.54
+PRY.5.2_1,Boquerón,General Eugenio A. Garay,28,100.0,19.96,790.79,1176.08,1.5
+PRY.5.3_1,Boquerón,Mariscal José Félix Estigarribia,28,100.0,19.71,822.58,1161.45,1.43
+PRY.6.1_1,Caaguazú,3 de Febrero,29,100.0,21.39,1841.61,1260.35,0.68
+PRY.6.2_1,Caaguazú,Caaguazú,29,100.0,21.28,1781.73,1253.8,0.71
+PRY.6.3_1,Caaguazú,Carayaó,29,100.0,21.09,1657.85,1242.94,0.75
+PRY.6.4_1,Caaguazú,Coronel Oviedo,29,100.0,21.0,1691.06,1237.27,0.73
+PRY.6.5_1,Caaguazú,Doctor Cecilio Báez,29,100.0,21.23,1667.38,1251.12,0.75
+PRY.6.6_1,Caaguazú,Doctor J. Eulogio Estigarribia,29,100.0,21.31,1793.53,1255.56,0.7
+PRY.6.7_1,Caaguazú,Doctor Juan Manuel Frutos,29,100.0,21.31,1865.43,1255.92,0.67
+PRY.6.8_1,Caaguazú,José Domingo Ocampos,29,100.0,21.29,1763.49,1254.79,0.71
+PRY.6.9_1,Caaguazú,La Pastora,29,100.0,20.9,1637.86,1231.64,0.75
+PRY.6.10_1,Caaguazú,Mariscal Francisco Solano López,29,100.0,21.48,1716.2,1265.54,0.74
+PRY.6.11_1,Caaguazú,Nueva Londres,29,100.0,20.89,1608.0,1230.83,0.77
+PRY.6.12_1,Caaguazú,R. I. 3 Corrales,29,100.0,21.15,1709.16,1246.26,0.73
+PRY.6.13_1,Caaguazú,Raúl Arsenio Oviedo,29,100.0,21.42,1743.51,1262.43,0.72
+PRY.6.14_1,Caaguazú,Repatriación,29,100.0,21.22,1819.81,1250.3,0.69
+PRY.6.15_1,Caaguazú,San Joaquín,29,100.0,21.42,1906.15,1262.43,0.66
+PRY.6.16_1,Caaguazú,San José de los Arroyos,29,100.0,20.94,1672.17,1233.72,0.74
+PRY.6.17_1,Caaguazú,Santa Rosa del Mbutuy,29,100.0,21.36,1697.87,1258.98,0.74
+PRY.6.18_1,Caaguazú,Simón Bolívar,29,100.0,21.14,1631.15,1245.73,0.76
+PRY.6.19_1,Caaguazú,Yhú,29,100.0,21.57,1785.69,1270.86,0.71
+PRY.7.1_1,Caazapá,Abaí,29,100.0,21.06,1855.14,1241.28,0.67
+PRY.7.2_1,Caazapá,Caazapá,29,100.0,20.88,1659.31,1230.63,0.74
+PRY.7.3_1,Caazapá,Doctor Moisés S. Bertoni,29,100.0,20.58,1643.27,1212.95,0.74
+PRY.7.4_1,Caazapá,Emboscada (Caazapa),29,100.0,20.97,1749.52,1235.48,0.71
+PRY.7.5_1,Caazapá,Fulgencio Yegros,29,100.0,20.52,1630.52,1209.18,0.74
+PRY.7.6_1,Caazapá,General Higinio Morínigo,29,100.0,21.01,1661.01,1237.85,0.75
+PRY.7.7_1,Caazapá,Maciel,29,100.0,20.74,1644.99,1222.36,0.74
+PRY.7.8_1,Caazapá,San Juan Nepomuceno,29,100.0,21.02,1757.6,1238.82,0.71
+PRY.7.9_1,Caazapá,Tabaí,29,100.0,20.92,1835.4,1233.07,0.68
+PRY.7.10_1,Caazapá,Yuty,29,100.0,20.75,1717.39,1222.98,0.71
+PRY.8.1_1,Canindeyú,Corpus Christi,29,100.0,21.69,1733.68,1278.23,0.74
+PRY.8.2_1,Canindeyú,General Francisco C. Alvarez,29,100.0,21.69,1689.15,1278.19,0.76
+PRY.8.3_1,Canindeyú,Itanara,29,100.0,21.89,1656.87,1290.19,0.78
+PRY.8.4_1,Canindeyú,Salto del Guairá,29,100.0,21.72,1561.68,1279.94,0.82
+PRY.8.5_1,Canindeyú,Villa San Isidro Curuguaty,29,100.0,21.69,1681.91,1278.31,0.76
+PRY.8.6_1,Canindeyú,Villa Ygatimí,29,100.0,21.79,1587.41,1284.32,0.81
+PRY.8.7_1,Canindeyú,Ypejhú,29,100.0,21.8,1688.71,1284.56,0.76
+PRY.9.1_1,Central,Areguá,29,100.0,20.64,1459.71,1216.54,0.83
+PRY.9.2_1,Central,Capiatá,29,100.0,20.77,1565.11,1224.16,0.78
+PRY.9.3_1,Central,Fernando de la Mora,29,100.0,20.83,1592.59,1227.69,0.77
+PRY.9.4_1,Central,Guarambaré,29,100.0,20.84,1520.19,1227.98,0.81
+PRY.9.5_1,Central,Itá,29,100.0,20.78,1517.95,1224.56,0.81
+PRY.9.6_1,Central,Itauguá,29,100.0,20.84,1573.62,1228.15,0.78
+PRY.9.7_1,Central,Juan Augusto Saldívar,29,100.0,20.86,1612.32,1229.48,0.76
+PRY.9.8_1,Central,Lambaré,29,100.0,20.7,1425.26,1219.56,0.86
+PRY.9.9_1,Central,Limpio,29,100.0,20.53,1439.11,1209.99,0.84
+PRY.9.10_1,Central,Luque,29,100.0,20.65,1475.34,1216.8,0.83
+PRY.9.11_1,Central,Mariano Roque Alonso,29,100.0,20.52,1426.33,1209.28,0.85
+PRY.9.12_1,Central,Ñemby,29,100.0,20.82,1514.09,1226.87,0.81
+PRY.9.13_1,Central,Nueva Italia,29,100.0,20.42,1457.19,1203.64,0.83
+PRY.9.14_1,Central,San Antonio,29,100.0,20.66,1407.73,1217.62,0.87
+PRY.9.15_1,Central,San Lorenzo,29,100.0,20.82,1594.99,1226.91,0.77
+PRY.9.16_1,Central,Villa Elisa,29,100.0,20.77,1449.98,1223.92,0.85
+PRY.9.17_1,Central,Villeta,29,100.0,20.41,1449.06,1202.99,0.83
+PRY.9.18_1,Central,Water body,29,100.0,20.46,1352.89,1205.52,0.89
+PRY.9.19_1,Central,Ypacaraí,29,100.0,20.71,1449.9,1220.68,0.84
+PRY.9.20_1,Central,Ypané,29,100.0,20.72,1447.9,1220.98,0.84
+PRY.10.1_1,Concepción,Belén,29,100.0,21.09,1473.05,1242.79,0.84
+PRY.10.2_1,Concepción,Concepción,29,100.0,21.12,1489.74,1244.49,0.84
+PRY.10.3_1,Concepción,Horqueta,29,100.0,21.75,1622.76,1281.67,0.79
+PRY.10.4_1,Concepción,Loreto,29,100.0,21.06,1493.38,1241.19,0.83
+PRY.10.5_1,Concepción,San Carlos,29,100.0,21.32,1466.36,1256.33,0.86
+PRY.10.6_1,Concepción,San Lázaro,29,100.0,20.64,1394.86,1216.09,0.87
+PRY.10.7_1,Concepción,Yby Yaù,29,100.0,22.01,1704.53,1297.12,0.76
+PRY.11.1_1,Cordillera,Altos,29,100.0,20.93,1681.29,1233.56,0.73
+PRY.11.2_1,Cordillera,Arroyos y Esteros,29,100.0,20.61,1531.25,1214.39,0.79
+PRY.11.3_1,Cordillera,Atyrá,29,100.0,20.84,1618.04,1227.99,0.76
+PRY.11.4_1,Cordillera,Caacupé,29,100.0,21.05,1764.69,1240.35,0.7
+PRY.11.5_1,Cordillera,Caraguatay,29,100.0,20.77,1603.11,1224.04,0.77
+PRY.11.6_1,Cordillera,Emboscada,29,100.0,20.68,1482.67,1218.41,0.82
+PRY.11.7_1,Cordillera,Eusebio Ayala,29,100.0,20.96,1673.39,1235.01,0.74
+PRY.11.8_1,Cordillera,Isla Pucú,29,100.0,21.02,1721.99,1238.45,0.72
+PRY.11.9_1,Cordillera,Itacurubí de la Cordillera,29,100.0,21.01,1749.79,1238.0,0.71
+PRY.11.10_1,Cordillera,Juan de Mena,29,100.0,20.68,1564.62,1218.61,0.78
+PRY.11.11_1,Cordillera,Loma Grande,29,100.0,20.61,1505.66,1214.43,0.81
+PRY.11.12_1,Cordillera,Mbocayaty del Yhaguy,29,100.0,20.81,1592.81,1226.35,0.77
+PRY.11.13_1,Cordillera,Nueva Colombia,29,100.0,20.81,1606.99,1226.47,0.77
+PRY.11.14_1,Cordillera,Piribebuy,29,100.0,21.04,1872.16,1239.78,0.66
+PRY.11.15_1,Cordillera,Primero de Marzo,29,100.0,20.72,1639.62,1221.2,0.75
+PRY.11.16_1,Cordillera,San Bernardino,29,100.0,20.87,1432.45,1229.96,0.86
+PRY.11.17_1,Cordillera,San José Obrero,29,100.0,20.68,1601.16,1218.55,0.76
+PRY.11.18_1,Cordillera,Santa Elena,29,100.0,20.95,1722.0,1234.86,0.72
+PRY.11.19_1,Cordillera,Tobatí,29,100.0,20.79,1604.96,1225.07,0.76
+PRY.11.20_1,Cordillera,Valenzuela,29,100.0,21.0,1815.88,1237.77,0.68
+PRY.12.1_1,Guairá,Borja,29,100.0,20.83,1756.02,1227.46,0.7
+PRY.12.2_1,Guairá,Capitán Mauricio José Troche,29,100.0,21.1,1618.64,1243.4,0.77
+PRY.12.3_1,Guairá,Coronel Martínez,29,100.0,20.87,1606.51,1230.16,0.77
+PRY.12.4_1,Guairá,Doctor Botrell,29,100.0,20.96,1622.77,1235.05,0.76
+PRY.12.5_1,Guairá,Félix Perez Cardozo,29,100.0,20.93,1657.68,1233.47,0.74
+PRY.12.6_1,Guairá,General Eugenio A. Garay,29,100.0,20.86,1796.77,1229.05,0.69
+PRY.12.7_1,Guairá,Independencia,29,100.0,21.09,1734.1,1242.67,0.72
+PRY.12.8_1,Guairá,Itapé,29,100.0,20.9,1604.0,1231.46,0.77
+PRY.12.9_1,Guairá,Iturbe,29,100.0,20.83,1629.78,1227.65,0.75
+PRY.12.10_1,Guairá,Jose A. Fassardi,29,100.0,21.08,1837.67,1242.36,0.68
+PRY.12.11_1,Guairá,Mbocayaty del Guairá,29,100.0,20.99,1645.21,1236.88,0.75
+PRY.12.12_1,Guairá,Natalicio Talavera,29,100.0,21.01,1623.31,1237.91,0.76
+PRY.12.13_1,Guairá,Ñumí,29,100.0,20.95,1647.62,1234.42,0.75
+PRY.12.14_1,Guairá,San Salvador,29,100.0,20.9,1630.1,1231.72,0.76
+PRY.12.15_1,Guairá,Villarrica,29,100.0,20.95,1654.92,1234.71,0.75
+PRY.12.16_1,Guairá,Yataity del Guairá,29,100.0,20.92,1627.53,1232.56,0.76
+PRY.13.1_1,Itapúa,Alto Verá,29,100.0,20.81,1855.69,1226.29,0.66
+PRY.13.2_1,Itapúa,Bella Vista,29,100.0,20.69,1953.67,1219.43,0.63
+PRY.13.3_1,Itapúa,Cambyreta,29,100.0,20.58,1874.68,1212.6,0.65
+PRY.13.4_1,Itapúa,Capitán Meza,29,100.0,20.66,1861.07,1217.75,0.66
+PRY.13.5_1,Itapúa,Capitán Miranda,29,100.0,20.64,1964.03,1216.44,0.62
+PRY.13.6_1,Itapúa,Carlos Antonio López,29,100.0,20.78,1985.22,1224.55,0.62
+PRY.13.7_1,Itapúa,Carmen del Paraná,29,100.0,20.5,1799.35,1208.15,0.67
+PRY.13.8_1,Itapúa,Coronel Bogado,29,100.0,20.39,1773.11,1201.75,0.68
+PRY.13.9_1,Itapúa,Edelira,29,100.0,20.63,1891.86,1215.9,0.65
+PRY.13.10_1,Itapúa,Encarnación,29,100.0,20.6,1851.23,1213.77,0.66
+PRY.13.11_1,Itapúa,Fram,29,100.0,20.68,1905.25,1218.91,0.64
+PRY.13.12_1,Itapúa,General Artigas,29,100.0,20.54,1716.13,1210.48,0.71
+PRY.13.13_1,Itapúa,General Delgado,29,100.0,20.45,1735.07,1204.87,0.7
+PRY.13.14_1,Itapúa,Hohenau,29,100.0,20.72,1937.07,1221.24,0.63
+PRY.13.15_1,Itapúa,Jesús,29,100.0,20.7,2029.59,1219.69,0.6
+PRY.13.16_1,Itapúa,José Leandro Oviedo,29,100.0,20.69,1791.47,1219.46,0.68
+PRY.13.17_1,Itapúa,La Paz,29,100.0,20.73,1938.17,1221.87,0.63
+PRY.13.18_1,Itapúa,Mayor Julio D. Otaño,29,100.0,20.93,1918.16,1233.3,0.64
+PRY.13.19_1,Itapúa,Natalio,29,100.0,20.71,1777.19,1220.2,0.69
+PRY.13.20_1,Itapúa,Nueva Alborada,29,100.0,20.6,2076.54,1214.12,0.59
+PRY.13.21_1,Itapúa,Obligado,29,100.0,20.73,1961.61,1221.68,0.62
+PRY.13.22_1,Itapúa,Pirapó,29,100.0,20.72,1891.73,1220.78,0.65
+PRY.13.23_1,Itapúa,San Cosme y Damián,29,100.0,20.13,1705.85,1186.42,0.7
+PRY.13.24_1,Itapúa,San Juan del Paraná,29,100.0,20.54,1786.51,1210.21,0.68
+PRY.13.25_1,Itapúa,San Pedro del Paraná,29,100.0,20.81,1844.93,1226.24,0.67
+PRY.13.26_1,Itapúa,San Rafael del Paraná,29,100.0,20.72,1908.15,1220.95,0.64
+PRY.13.27_1,Itapúa,Tomás Romero Pereira,29,100.0,20.62,1962.83,1215.42,0.62
+PRY.13.28_1,Itapúa,Trinidad,29,100.0,20.66,2029.1,1217.51,0.6
+PRY.13.29_1,Itapúa,Yatytay,29,100.0,20.73,1874.65,1221.74,0.65
+PRY.14.1_1,Misiones,Ayolas,29,100.0,20.16,1577.56,1187.91,0.75
+PRY.14.2_1,Misiones,San Ignacio,29,100.0,20.37,1581.23,1200.29,0.76
+PRY.14.3_1,Misiones,San Juan Bautista de las Misione,29,100.0,20.28,1531.06,1195.03,0.78
+PRY.14.4_1,Misiones,San Miguel,29,100.0,20.47,1626.88,1206.29,0.74
+PRY.14.5_1,Misiones,San Patricio,29,100.0,20.56,1776.32,1211.32,0.68
+PRY.14.6_1,Misiones,Santa María,29,100.0,20.52,1706.65,1209.33,0.71
+PRY.14.7_1,Misiones,Santa Rosa,29,100.0,20.5,1703.03,1208.17,0.71
+PRY.14.8_1,Misiones,Santiago,29,100.0,20.42,1677.71,1203.61,0.72
+PRY.14.9_1,Misiones,Villa Florida,29,100.0,20.4,1572.15,1202.33,0.77
+PRY.14.10_1,Misiones,Yabebyry,29,100.0,20.19,1523.66,1189.79,0.78
+PRY.15.1_1,Ñeembucú,Alberdi,29,100.0,20.21,1403.13,1191.0,0.85
+PRY.15.2_1,Ñeembucú,Cerrito,29,100.0,20.09,1481.68,1183.65,0.8
+PRY.15.3_1,Ñeembucú,Desmochados,29,100.0,20.12,1487.92,1185.59,0.8
+PRY.15.4_1,Ñeembucú,General José Eduvigis Díaz,29,100.0,20.13,1473.15,1186.07,0.81
+PRY.15.5_1,Ñeembucú,Guazú Cuá,29,100.0,20.15,1502.49,1187.37,0.79
+PRY.15.6_1,Ñeembucú,Humaitá,29,100.0,20.18,1454.1,1189.23,0.82
+PRY.15.7_1,Ñeembucú,Isla Umbú,29,100.0,20.17,1468.08,1188.42,0.81
+PRY.15.8_1,Ñeembucú,Laureles,29,100.0,20.14,1512.54,1186.73,0.78
+PRY.15.9_1,Ñeembucú,Mayor José J. Martinez,29,100.0,20.09,1486.66,1183.94,0.8
+PRY.15.10_1,Ñeembucú,Paso de Patria,29,100.0,20.14,1440.61,1186.74,0.82
+PRY.15.11_1,Ñeembucú,Pilar,29,100.0,20.14,1468.28,1186.93,0.81
+PRY.15.12_1,Ñeembucú,San Juan Bautista del Ñeembucu,29,100.0,20.18,1475.73,1189.35,0.81
+PRY.15.13_1,Ñeembucú,Tacuaras,29,100.0,20.16,1488.52,1188.07,0.8
+PRY.15.14_1,Ñeembucú,Villa Franca,29,100.0,20.2,1446.31,1190.46,0.82
+PRY.15.15_1,Ñeembucú,Villa Oliva,29,100.0,20.24,1458.49,1193.01,0.82
+PRY.15.16_1,Ñeembucú,Villalbín,29,100.0,20.09,1502.62,1184.16,0.79
+PRY.16.1_1,Paraguarí,Acahay,29,100.0,20.86,1693.38,1229.44,0.73
+PRY.16.2_1,Paraguarí,Caapucú,29,100.0,20.37,1523.92,1200.7,0.79
+PRY.16.3_1,Paraguarí,Carapeguá,29,100.0,20.61,1501.27,1214.31,0.81
+PRY.16.4_1,Paraguarí,Escobar,29,100.0,20.95,1705.82,1234.61,0.73
+PRY.16.5_1,Paraguarí,General Bernardino Caballero,29,100.0,20.96,1758.03,1235.08,0.7
+PRY.16.6_1,Paraguarí,La Colmena,29,100.0,20.89,1879.02,1230.86,0.66
+PRY.16.7_1,Paraguarí,Mbuyapey,29,100.0,20.62,1690.03,1215.15,0.72
+PRY.16.8_1,Paraguarí,Paraguarí,29,100.0,20.8,1508.76,1226.02,0.82
+PRY.16.9_1,Paraguarí,Pirayú,29,100.0,20.87,1526.78,1229.7,0.81
+PRY.16.10_1,Paraguarí,Quiíndy,29,100.0,20.61,1531.2,1214.63,0.8
+PRY.16.11_1,Paraguarí,Quyquyhó,29,100.0,20.63,1629.04,1215.82,0.75
+PRY.16.12_1,Paraguarí,San Roque González de Santa Cruz,29,100.0,20.62,1508.42,1214.86,0.81
+PRY.16.13_1,Paraguarí,Sapucaí,29,100.0,20.93,1712.09,1233.25,0.73
+PRY.16.14_1,Paraguarí,Tebicuarymí,29,100.0,20.88,1778.75,1230.21,0.7
+PRY.16.15_1,Paraguarí,Yaguarón,29,100.0,20.73,1460.15,1221.72,0.84
+PRY.16.16_1,Paraguarí,Ybycui,29,100.0,20.79,1722.54,1225.43,0.72
+PRY.16.17_1,Paraguarí,Ybytimí,29,100.0,20.91,1733.7,1232.31,0.71
+PRY.17.1_1,Presidente Hayes,Benjamín Aceval,29,100.0,20.54,1459.82,1210.32,0.83
+PRY.17.2_1,Presidente Hayes,Pozo Colorado,28,51.26,20.23,1219.36,1191.95,0.99
+PRY.17.3_1,Presidente Hayes,Puerto Pinasco,29,96.35,20.41,1363.78,1202.57,0.88
+PRY.17.4_1,Presidente Hayes,Villa Hayes,29,59.42,20.42,1261.53,1203.26,0.98
+PRY.18.1_1,San Pedro,25 de Diciembre,29,100.0,20.74,1565.83,1222.43,0.78
+PRY.18.2_1,San Pedro,Antequera,29,100.0,20.68,1468.78,1218.75,0.83
+PRY.18.3_1,San Pedro,Choré,29,100.0,21.52,1611.56,1268.12,0.79
+PRY.18.4_1,San Pedro,General Elizardo Aquino,29,100.0,21.21,1597.8,1249.75,0.78
+PRY.18.5_1,San Pedro,General Isidoro Resquín,29,100.0,21.74,1670.26,1281.31,0.77
+PRY.18.6_1,San Pedro,Itacurubí del Rosario,29,100.0,20.92,1565.07,1232.8,0.79
+PRY.18.7_1,San Pedro,Lima,29,100.0,21.44,1571.51,1263.2,0.8
+PRY.18.8_1,San Pedro,Nueva Germania,29,100.0,21.83,1724.51,1286.61,0.75
+PRY.18.9_1,San Pedro,San Estanislao,29,100.0,21.56,1702.32,1270.32,0.75
+PRY.18.10_1,San Pedro,San Pablo,29,100.0,20.93,1540.55,1233.18,0.8
+PRY.18.11_1,San Pedro,San Pedro del Ycuamandyyú,29,100.0,21.14,1534.82,1246.03,0.81
+PRY.18.12_1,San Pedro,Tacuatí,29,100.0,21.84,1706.67,1286.75,0.76
+PRY.18.13_1,San Pedro,Unión,29,100.0,20.98,1551.09,1236.27,0.8
+PRY.18.14_1,San Pedro,Villa del Rosario,29,100.0,20.66,1526.39,1217.5,0.8
+PRY.18.15_1,San Pedro,Yataity del Norte,29,100.0,21.4,1629.27,1261.22,0.78

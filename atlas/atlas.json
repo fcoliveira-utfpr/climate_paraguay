@@ -1,0 +1,178 @@
+{
+ "grupos": [
+  {
+   "id": "koppen",
+   "titulo": {
+    "es": "Köppen-Geiger",
+    "pt": "Köppen-Geiger",
+    "en": "Köppen-Geiger"
+   },
+   "figuras": [
+    {
+     "arquivo": "fig_koppen.png",
+     "legenda": {
+      "es": "Clasificación climática de Köppen-Geiger (Alvares et al., 2013). Predomina Aw — Tropical de sabana, invierno seco (42.7% del área).",
+      "pt": "Classificação climática de Köppen-Geiger (Alvares et al., 2013). Predomina Aw — Tropical com inverno seco (42.7% da área).",
+      "en": "Köppen-Geiger climate classification (Alvares et al., 2013). Aw — Tropical savanna, dry winter prevails (42.7% of the area)."
+     },
+     "largo": true
+    },
+    {
+     "arquivo": "fig_p_anual.png",
+     "legenda": {
+      "es": "Precipitación media anual (mm).",
+      "pt": "Precipitação média anual (mm).",
+      "en": "Mean annual precipitation (mm)."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_p_mes_seco.png",
+     "legenda": {
+      "es": "Precipitación del mes más seco (mm).",
+      "pt": "Precipitação do mês mais seco (mm).",
+      "en": "Precipitation of the driest month (mm)."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_t_anual.png",
+     "legenda": {
+      "es": "Temperatura media anual (°C).",
+      "pt": "Temperatura média anual (°C).",
+      "en": "Mean annual temperature (°C)."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_t_mes_frio.png",
+     "legenda": {
+      "es": "Temperatura media del mes más frío (°C).",
+      "pt": "Temperatura média do mês mais frio (°C).",
+      "en": "Mean temperature of the coldest month (°C)."
+     },
+     "largo": false
+    }
+   ]
+  },
+  {
+   "id": "thornthwaite",
+   "titulo": {
+    "es": "Thornthwaite (1948)",
+    "pt": "Thornthwaite (1948)",
+    "en": "Thornthwaite (1948)"
+   },
+   "figuras": [
+    {
+     "arquivo": "fig_th_umidade.png",
+     "legenda": {
+      "es": "Clase de humedad de Thornthwaite (CAD = 100 mm). Predomina D — Semiárido (40.9% del área).",
+      "pt": "Classe de umidade de Thornthwaite (CAD = 100 mm). Predomina D — Semiárido (40.9% da área).",
+      "en": "Thornthwaite moisture class (AWC = 100 mm). D — Semiarid prevails (40.9% of the area)."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_th_subtipo.png",
+     "legenda": {
+      "es": "Variación estacional de la humedad (subtipo de Thornthwaite). Predomina d — exceso hídrico nulo o pequeño (73.9% del área).",
+      "pt": "Variação sazonal da umidade (subtipo de Thornthwaite). Predomina d — excedente hídrico nulo ou pequeno (73.9% da área).",
+      "en": "Seasonal variation of moisture (Thornthwaite subtype). d — little or no water surplus prevails (73.9% of the area)."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_th_termica.png",
+     "legenda": {
+      "es": "Eficiencia térmica (ETP anual). Predomina A' — Megatérmico (100.0% del área).",
+      "pt": "Eficiência térmica (ETP anual). Predomina A' — Megatérmico (100.0% da área).",
+      "en": "Thermal efficiency (annual PET). A' — Megathermal prevails (100.0% of the area)."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_th_concentracao.png",
+     "legenda": {
+      "es": "Concentración estival de la eficiencia térmica. Predomina a' (100.0% del área).",
+      "pt": "Concentração estival da eficiência térmica. Predomina a' (100.0% da área).",
+      "en": "Summer concentration of thermal efficiency. a' prevails (100.0% of the area)."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_th_im.png",
+     "legenda": {
+      "es": "Índice de humedad (Im = Ih − 0,6 Ia).",
+      "pt": "Índice de umidade (Im = Ih − 0,6 Ia).",
+      "en": "Moisture index (Im = Ih − 0.6 Ia)."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_th_def.png",
+     "legenda": {
+      "es": "Déficit hídrico anual (mm), balance hídrico de Thornthwaite y Mather (1955).",
+      "pt": "Deficiência hídrica anual (mm), balanço hídrico de Thornthwaite e Mather (1955).",
+      "en": "Annual water deficit (mm), Thornthwaite and Mather (1955) water balance."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_th_exc.png",
+     "legenda": {
+      "es": "Exceso hídrico anual (mm).",
+      "pt": "Excedente hídrico anual (mm).",
+      "en": "Annual water surplus (mm)."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_pet_anual.png",
+     "legenda": {
+      "es": "Evapotranspiración potencial anual (mm), Penman-Monteith (CHELSA).",
+      "pt": "Evapotranspiração potencial anual (mm), Penman-Monteith (CHELSA).",
+      "en": "Annual potential evapotranspiration (mm), Penman-Monteith (CHELSA)."
+     },
+     "largo": false
+    }
+   ]
+  },
+  {
+   "id": "holdridge",
+   "titulo": {
+    "es": "Zonas de vida de Holdridge",
+    "pt": "Zonas de vida de Holdridge",
+    "en": "Holdridge life zones"
+   },
+   "figuras": [
+    {
+     "arquivo": "fig_holdridge.png",
+     "legenda": {
+      "es": "Zonas de vida de Holdridge (ETP de Holdridge = 58,93 × biotemperatura). Predomina Bosque húmedo subtropical (54.4% del área).",
+      "pt": "Zonas de vida de Holdridge (ETP de Holdridge = 58,93 × biotemperatura). Predomina Floresta úmida subtropical (54.4% da área).",
+      "en": "Holdridge life zones (Holdridge PET = 58.93 × biotemperature). Subtropical moist forest prevails (54.4% of the area)."
+     },
+     "largo": true
+    },
+    {
+     "arquivo": "fig_biotemp.png",
+     "legenda": {
+      "es": "Biotemperatura media anual (°C).",
+      "pt": "Biotemperatura média anual (°C).",
+      "en": "Mean annual biotemperature (°C)."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_razao_etp.png",
+     "legenda": {
+      "es": "Razón de evapotranspiración potencial (ETP de Holdridge / P).",
+      "pt": "Razão de evapotranspiração potencial (ETP de Holdridge / P).",
+      "en": "Potential evapotranspiration ratio (Holdridge PET / P)."
+     },
+     "largo": false
+    }
+   ]
+  }
+ ]
+}

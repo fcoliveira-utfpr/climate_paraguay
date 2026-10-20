@@ -1,0 +1,1002 @@
+{
+ "koppen": {
+  "1": {
+   "cor": "#0000FF",
+   "nome": {
+    "es": "Af — Tropical de selva (sin estación seca)",
+    "pt": "Af — Tropical úmido (sem estação seca)",
+    "en": "Af — Tropical rainforest"
+   }
+  },
+  "2": {
+   "cor": "#0078FF",
+   "nome": {
+    "es": "Am — Tropical monzónico",
+    "pt": "Am — Tropical de monção",
+    "en": "Am — Tropical monsoon"
+   }
+  },
+  "4": {
+   "cor": "#96C8FF",
+   "nome": {
+    "es": "Aw — Tropical de sabana, invierno seco",
+    "pt": "Aw — Tropical com inverno seco",
+    "en": "Aw — Tropical savanna, dry winter"
+   }
+  },
+  "5": {
+   "cor": "#F5A623",
+   "nome": {
+    "es": "BSh — Semiárido cálido (estepa)",
+    "pt": "BSh — Semiárido quente (estepe)",
+    "en": "BSh — Hot semi-arid (steppe)"
+   }
+  },
+  "9": {
+   "cor": "#C8FF50",
+   "nome": {
+    "es": "Cfa — Templado, sin estación seca, verano cálido",
+    "pt": "Cfa — Temperado, sem estação seca, verão quente",
+    "en": "Cfa — Temperate, no dry season, hot summer"
+   }
+  },
+  "15": {
+   "cor": "#C8FFC8",
+   "nome": {
+    "es": "Cwa — Templado, invierno seco, verano cálido",
+    "pt": "Cwa — Temperado, inverno seco, verão quente",
+    "en": "Cwa — Temperate, dry winter, hot summer"
+   }
+  }
+ },
+ "th_umidade": {
+  "4": {
+   "cor": "#fee08b",
+   "nome": {
+    "es": "B2 — Húmedo",
+    "pt": "B2 — Úmido",
+    "en": "B2 — Humid"
+   }
+  },
+  "5": {
+   "cor": "#fec44f",
+   "nome": {
+    "es": "B1 — Húmedo",
+    "pt": "B1 — Úmido",
+    "en": "B1 — Humid"
+   }
+  },
+  "6": {
+   "cor": "#fe9929",
+   "nome": {
+    "es": "C2 — Subhúmedo húmedo",
+    "pt": "C2 — Subúmido úmido",
+    "en": "C2 — Moist subhumid"
+   }
+  },
+  "7": {
+   "cor": "#ec7014",
+   "nome": {
+    "es": "C1 — Subhúmedo seco",
+    "pt": "C1 — Subúmido seco",
+    "en": "C1 — Dry subhumid"
+   }
+  },
+  "8": {
+   "cor": "#cc4c02",
+   "nome": {
+    "es": "D — Semiárido",
+    "pt": "D — Semiárido",
+    "en": "D — Semiarid"
+   }
+  }
+ },
+ "th_subtipo": {
+  "1": {
+   "cor": "#1a9850",
+   "nome": {
+    "es": "r — déficit hídrico nulo o pequeño",
+    "pt": "r — deficiência hídrica nula ou pequena",
+    "en": "r — little or no water deficiency"
+   }
+  },
+  "6": {
+   "cor": "#bababa",
+   "nome": {
+    "es": "d — exceso hídrico nulo o pequeño",
+    "pt": "d — excedente hídrico nulo ou pequeno",
+    "en": "d — little or no water surplus"
+   }
+  }
+ },
+ "th_termica": {
+  "1": {
+   "cor": "#b2182b",
+   "nome": {
+    "es": "A' — Megatérmico",
+    "pt": "A' — Megatérmico",
+    "en": "A' — Megathermal"
+   }
+  }
+ },
+ "th_concentracao": {
+  "1": {
+   "cor": "#8c510a",
+   "nome": {
+    "es": "a'",
+    "pt": "a'",
+    "en": "a'"
+   }
+  }
+ },
+ "holdridge": {
+  "28": {
+   "cor": "#9ecae1",
+   "nome": {
+    "es": "Bosque seco subtropical",
+    "pt": "Floresta seca subtropical",
+    "en": "Subtropical dry forest"
+   }
+  },
+  "29": {
+   "cor": "#6baed6",
+   "nome": {
+    "es": "Bosque húmedo subtropical",
+    "pt": "Floresta úmida subtropical",
+    "en": "Subtropical moist forest"
+   }
+  }
+ },
+ "koppen_todas": {
+  "1": {
+   "cor": "#0000FF",
+   "nome": {
+    "es": "Af — Tropical de selva (sin estación seca)",
+    "pt": "Af — Tropical úmido (sem estação seca)",
+    "en": "Af — Tropical rainforest"
+   }
+  },
+  "2": {
+   "cor": "#0078FF",
+   "nome": {
+    "es": "Am — Tropical monzónico",
+    "pt": "Am — Tropical de monção",
+    "en": "Am — Tropical monsoon"
+   }
+  },
+  "3": {
+   "cor": "#46A0FF",
+   "nome": {
+    "es": "As — Tropical de sabana, verano seco",
+    "pt": "As — Tropical com verão seco",
+    "en": "As — Tropical savanna, dry summer"
+   }
+  },
+  "4": {
+   "cor": "#96C8FF",
+   "nome": {
+    "es": "Aw — Tropical de sabana, invierno seco",
+    "pt": "Aw — Tropical com inverno seco",
+    "en": "Aw — Tropical savanna, dry winter"
+   }
+  },
+  "5": {
+   "cor": "#F5A623",
+   "nome": {
+    "es": "BSh — Semiárido cálido (estepa)",
+    "pt": "BSh — Semiárido quente (estepe)",
+    "en": "BSh — Hot semi-arid (steppe)"
+   }
+  },
+  "6": {
+   "cor": "#FFDA8C",
+   "nome": {
+    "es": "BSk — Semiárido frío (estepa)",
+    "pt": "BSk — Semiárido frio (estepe)",
+    "en": "BSk — Cold semi-arid (steppe)"
+   }
+  },
+  "7": {
+   "cor": "#FF0000",
+   "nome": {
+    "es": "BWh — Desértico cálido",
+    "pt": "BWh — Desértico quente",
+    "en": "BWh — Hot desert"
+   }
+  },
+  "8": {
+   "cor": "#FF9696",
+   "nome": {
+    "es": "BWk — Desértico frío",
+    "pt": "BWk — Desértico frio",
+    "en": "BWk — Cold desert"
+   }
+  },
+  "9": {
+   "cor": "#C8FF50",
+   "nome": {
+    "es": "Cfa — Templado, sin estación seca, verano cálido",
+    "pt": "Cfa — Temperado, sem estação seca, verão quente",
+    "en": "Cfa — Temperate, no dry season, hot summer"
+   }
+  },
+  "10": {
+   "cor": "#64FF50",
+   "nome": {
+    "es": "Cfb — Templado, sin estación seca, verano templado",
+    "pt": "Cfb — Temperado, sem estação seca, verão temperado",
+    "en": "Cfb — Temperate, no dry season, warm summer"
+   }
+  },
+  "11": {
+   "cor": "#32C800",
+   "nome": {
+    "es": "Cfc — Templado, sin estación seca, verano corto y fresco",
+    "pt": "Cfc — Temperado, sem estação seca, verão curto e fresco",
+    "en": "Cfc — Temperate, no dry season, cool summer"
+   }
+  },
+  "12": {
+   "cor": "#FFFF00",
+   "nome": {
+    "es": "Csa — Templado, verano seco, verano cálido",
+    "pt": "Csa — Temperado, verão seco, verão quente",
+    "en": "Csa — Temperate, dry summer, hot summer"
+   }
+  },
+  "13": {
+   "cor": "#C8C800",
+   "nome": {
+    "es": "Csb — Templado, verano seco, verano templado",
+    "pt": "Csb — Temperado, verão seco, verão temperado",
+    "en": "Csb — Temperate, dry summer, warm summer"
+   }
+  },
+  "14": {
+   "cor": "#969600",
+   "nome": {
+    "es": "Csc — Templado, verano seco, verano corto y fresco",
+    "pt": "Csc — Temperado, verão seco, verão curto e fresco",
+    "en": "Csc — Temperate, dry summer, cool summer"
+   }
+  },
+  "15": {
+   "cor": "#C8FFC8",
+   "nome": {
+    "es": "Cwa — Templado, invierno seco, verano cálido",
+    "pt": "Cwa — Temperado, inverno seco, verão quente",
+    "en": "Cwa — Temperate, dry winter, hot summer"
+   }
+  },
+  "16": {
+   "cor": "#96FF96",
+   "nome": {
+    "es": "Cwb — Templado, invierno seco, verano templado",
+    "pt": "Cwb — Temperado, inverno seco, verão temperado",
+    "en": "Cwb — Temperate, dry winter, warm summer"
+   }
+  },
+  "17": {
+   "cor": "#64C864",
+   "nome": {
+    "es": "Cwc — Templado, invierno seco, verano corto y fresco",
+    "pt": "Cwc — Temperado, inverno seco, verão curto e fresco",
+    "en": "Cwc — Temperate, dry winter, cool summer"
+   }
+  },
+  "18": {
+   "cor": "#B4A0FA",
+   "nome": {
+    "es": "Dfa — Continental, sin estación seca, verano cálido",
+    "pt": "Dfa — Continental, sem estação seca, verão quente",
+    "en": "Dfa — Continental, no dry season, hot summer"
+   }
+  },
+  "19": {
+   "cor": "#8C78F0",
+   "nome": {
+    "es": "Dfb — Continental, sin estación seca, verano templado",
+    "pt": "Dfb — Continental, sem estação seca, verão temperado",
+    "en": "Dfb — Continental, no dry season, warm summer"
+   }
+  },
+  "20": {
+   "cor": "#6450E6",
+   "nome": {
+    "es": "Dfc — Continental, sin estación seca, verano corto y fresco",
+    "pt": "Dfc — Continental, sem estação seca, verão curto e fresco",
+    "en": "Dfc — Continental, no dry season, cool summer"
+   }
+  },
+  "21": {
+   "cor": "#3C2CB4",
+   "nome": {
+    "es": "Dfd — Continental, sin estación seca, invierno muy frío",
+    "pt": "Dfd — Continental, sem estação seca, inverno muito frio",
+    "en": "Dfd — Continental, no dry season, very cold winter"
+   }
+  },
+  "22": {
+   "cor": "#E0C8FF",
+   "nome": {
+    "es": "Dsa — Continental, verano seco, verano cálido",
+    "pt": "Dsa — Continental, verão seco, verão quente",
+    "en": "Dsa — Continental, dry summer, hot summer"
+   }
+  },
+  "23": {
+   "cor": "#C8A0FF",
+   "nome": {
+    "es": "Dsb — Continental, verano seco, verano templado",
+    "pt": "Dsb — Continental, verão seco, verão temperado",
+    "en": "Dsb — Continental, dry summer, warm summer"
+   }
+  },
+  "24": {
+   "cor": "#B478FF",
+   "nome": {
+    "es": "Dsc — Continental, verano seco, verano corto y fresco",
+    "pt": "Dsc — Continental, verão seco, verão curto e fresco",
+    "en": "Dsc — Continental, dry summer, cool summer"
+   }
+  },
+  "25": {
+   "cor": "#9650FF",
+   "nome": {
+    "es": "Dsd — Continental, verano seco, invierno muy frío",
+    "pt": "Dsd — Continental, verão seco, inverno muito frio",
+    "en": "Dsd — Continental, dry summer, very cold winter"
+   }
+  },
+  "26": {
+   "cor": "#D2D2FF",
+   "nome": {
+    "es": "Dwa — Continental, invierno seco, verano cálido",
+    "pt": "Dwa — Continental, inverno seco, verão quente",
+    "en": "Dwa — Continental, dry winter, hot summer"
+   }
+  },
+  "27": {
+   "cor": "#AAAAFF",
+   "nome": {
+    "es": "Dwb — Continental, invierno seco, verano templado",
+    "pt": "Dwb — Continental, inverno seco, verão temperado",
+    "en": "Dwb — Continental, dry winter, warm summer"
+   }
+  },
+  "28": {
+   "cor": "#8282FF",
+   "nome": {
+    "es": "Dwc — Continental, invierno seco, verano corto y fresco",
+    "pt": "Dwc — Continental, inverno seco, verão curto e fresco",
+    "en": "Dwc — Continental, dry winter, cool summer"
+   }
+  },
+  "29": {
+   "cor": "#5A5AFF",
+   "nome": {
+    "es": "Dwd — Continental, invierno seco, invierno muy frío",
+    "pt": "Dwd — Continental, inverno seco, inverno muito frio",
+    "en": "Dwd — Continental, dry winter, very cold winter"
+   }
+  },
+  "30": {
+   "cor": "#B4B4B4",
+   "nome": {
+    "es": "ET — Tundra",
+    "pt": "ET — Tundra",
+    "en": "ET — Tundra"
+   }
+  },
+  "31": {
+   "cor": "#696969",
+   "nome": {
+    "es": "EF — Hielo perpetuo",
+    "pt": "EF — Gelo perpétuo",
+    "en": "EF — Ice cap"
+   }
+  }
+ },
+ "holdridge_todas": {
+  "1": {
+   "cor": "#4d4d4d",
+   "nome": {
+    "es": "Hielo polar",
+    "pt": "Gelo polar",
+    "en": "Polar ice"
+   }
+  },
+  "2": {
+   "cor": "#6b6b6b",
+   "nome": {
+    "es": "Desierto polar",
+    "pt": "Deserto polar",
+    "en": "Polar desert"
+   }
+  },
+  "3": {
+   "cor": "#8a8a8a",
+   "nome": {
+    "es": "Tundra seca subpolar",
+    "pt": "Tundra seca subpolar",
+    "en": "Subpolar dry tundra"
+   }
+  },
+  "4": {
+   "cor": "#a8a8a8",
+   "nome": {
+    "es": "Tundra húmeda subpolar",
+    "pt": "Tundra úmida subpolar",
+    "en": "Subpolar moist tundra"
+   }
+  },
+  "5": {
+   "cor": "#bdbdbd",
+   "nome": {
+    "es": "Tundra muy húmeda subpolar",
+    "pt": "Tundra muito úmida subpolar",
+    "en": "Subpolar wet tundra"
+   }
+  },
+  "6": {
+   "cor": "#c7e9c0",
+   "nome": {
+    "es": "Tundra pluvial subpolar",
+    "pt": "Tundra pluvial subpolar",
+    "en": "Subpolar rain tundra"
+   }
+  },
+  "7": {
+   "cor": "#a1d99b",
+   "nome": {
+    "es": "Desierto boreal",
+    "pt": "Deserto boreal",
+    "en": "Boreal desert"
+   }
+  },
+  "8": {
+   "cor": "#74c476",
+   "nome": {
+    "es": "Matorral seco boreal",
+    "pt": "Arbustal seco boreal",
+    "en": "Boreal dry bush"
+   }
+  },
+  "9": {
+   "cor": "#fdd0a2",
+   "nome": {
+    "es": "Bosque húmedo boreal",
+    "pt": "Floresta úmida boreal",
+    "en": "Boreal moist forest"
+   }
+  },
+  "10": {
+   "cor": "#fdae6b",
+   "nome": {
+    "es": "Bosque muy húmedo boreal",
+    "pt": "Floresta muito úmida boreal",
+    "en": "Boreal wet forest"
+   }
+  },
+  "11": {
+   "cor": "#31a354",
+   "nome": {
+    "es": "Bosque pluvial boreal",
+    "pt": "Floresta pluvial boreal",
+    "en": "Boreal rain forest"
+   }
+  },
+  "12": {
+   "cor": "#238b45",
+   "nome": {
+    "es": "Desierto templado frío",
+    "pt": "Deserto temperado frio",
+    "en": "Cool temperate desert"
+   }
+  },
+  "13": {
+   "cor": "#006d2c",
+   "nome": {
+    "es": "Matorral desértico templado frío",
+    "pt": "Arbustal desértico temperado frio",
+    "en": "Cool temperate desert bush"
+   }
+  },
+  "14": {
+   "cor": "#fdd49e",
+   "nome": {
+    "es": "Estepa templada fría",
+    "pt": "Estepe temperada fria",
+    "en": "Cool temperate steppe"
+   }
+  },
+  "15": {
+   "cor": "#fdbb84",
+   "nome": {
+    "es": "Bosque húmedo templado frío",
+    "pt": "Floresta úmida temperada fria",
+    "en": "Cool temperate moist forest"
+   }
+  },
+  "16": {
+   "cor": "#9ecae1",
+   "nome": {
+    "es": "Bosque muy húmedo templado frío",
+    "pt": "Floresta muito úmida temperada fria",
+    "en": "Cool temperate wet forest"
+   }
+  },
+  "17": {
+   "cor": "#6baed6",
+   "nome": {
+    "es": "Bosque pluvial templado frío",
+    "pt": "Floresta pluvial temperada fria",
+    "en": "Cool temperate rain forest"
+   }
+  },
+  "18": {
+   "cor": "#3182bd",
+   "nome": {
+    "es": "Desierto templado cálido",
+    "pt": "Deserto temperado quente",
+    "en": "Warm temperate desert"
+   }
+  },
+  "19": {
+   "cor": "#fee8c8",
+   "nome": {
+    "es": "Matorral desértico templado cálido",
+    "pt": "Arbustal desértico temperado quente",
+    "en": "Warm temperate desert bush"
+   }
+  },
+  "20": {
+   "cor": "#fdbb84",
+   "nome": {
+    "es": "Estepa espinosa templada cálida",
+    "pt": "Estepe espinhosa temperada quente",
+    "en": "Warm temperate thorn steppe"
+   }
+  },
+  "21": {
+   "cor": "#fdd0a2",
+   "nome": {
+    "es": "Bosque seco templado cálido",
+    "pt": "Floresta seca temperada quente",
+    "en": "Warm temperate dry forest"
+   }
+  },
+  "22": {
+   "cor": "#9ecae1",
+   "nome": {
+    "es": "Bosque húmedo templado cálido",
+    "pt": "Floresta úmida temperada quente",
+    "en": "Warm temperate moist forest"
+   }
+  },
+  "23": {
+   "cor": "#6baed6",
+   "nome": {
+    "es": "Bosque muy húmedo templado cálido",
+    "pt": "Floresta muito úmida temperada quente",
+    "en": "Warm temperate wet forest"
+   }
+  },
+  "24": {
+   "cor": "#3182bd",
+   "nome": {
+    "es": "Bosque pluvial templado cálido",
+    "pt": "Floresta pluvial temperada quente",
+    "en": "Warm temperate rain forest"
+   }
+  },
+  "25": {
+   "cor": "#fef0d9",
+   "nome": {
+    "es": "Desierto subtropical",
+    "pt": "Deserto subtropical",
+    "en": "Subtropical desert"
+   }
+  },
+  "26": {
+   "cor": "#fdcc8a",
+   "nome": {
+    "es": "Matorral desértico subtropical",
+    "pt": "Arbustal desértico subtropical",
+    "en": "Subtropical desert bush"
+   }
+  },
+  "27": {
+   "cor": "#fdae6b",
+   "nome": {
+    "es": "Estepa espinosa subtropical",
+    "pt": "Estepe espinhosa subtropical",
+    "en": "Subtropical thorn steppe"
+   }
+  },
+  "28": {
+   "cor": "#9ecae1",
+   "nome": {
+    "es": "Bosque seco subtropical",
+    "pt": "Floresta seca subtropical",
+    "en": "Subtropical dry forest"
+   }
+  },
+  "29": {
+   "cor": "#6baed6",
+   "nome": {
+    "es": "Bosque húmedo subtropical",
+    "pt": "Floresta úmida subtropical",
+    "en": "Subtropical moist forest"
+   }
+  },
+  "30": {
+   "cor": "#3182bd",
+   "nome": {
+    "es": "Bosque muy húmedo subtropical",
+    "pt": "Floresta muito úmida subtropical",
+    "en": "Subtropical wet forest"
+   }
+  },
+  "31": {
+   "cor": "#fef0d9",
+   "nome": {
+    "es": "Bosque pluvial subtropical",
+    "pt": "Floresta pluvial subtropical",
+    "en": "Subtropical rain forest"
+   }
+  },
+  "32": {
+   "cor": "#fdd49e",
+   "nome": {
+    "es": "Desierto tropical",
+    "pt": "Deserto tropical",
+    "en": "Tropical desert"
+   }
+  },
+  "33": {
+   "cor": "#fdbb84",
+   "nome": {
+    "es": "Matorral desértico tropical",
+    "pt": "Arbustal desértico tropical",
+    "en": "Tropical desert bush"
+   }
+  },
+  "34": {
+   "cor": "#fdae6b",
+   "nome": {
+    "es": "Estepa espinosa tropical",
+    "pt": "Estepe espinhosa tropical",
+    "en": "Tropical thorn steppe"
+   }
+  },
+  "35": {
+   "cor": "#fd8d3c",
+   "nome": {
+    "es": "Bosque muy seco tropical",
+    "pt": "Floresta muito seca tropical",
+    "en": "Tropical very dry forest"
+   }
+  },
+  "36": {
+   "cor": "#e6550d",
+   "nome": {
+    "es": "Bosque seco tropical",
+    "pt": "Floresta seca tropical",
+    "en": "Tropical dry forest"
+   }
+  },
+  "37": {
+   "cor": "#a63603",
+   "nome": {
+    "es": "Bosque húmedo tropical",
+    "pt": "Floresta úmida tropical",
+    "en": "Tropical moist forest"
+   }
+  },
+  "38": {
+   "cor": "#7f2704",
+   "nome": {
+    "es": "Bosque muy húmedo tropical",
+    "pt": "Floresta muito úmida tropical",
+    "en": "Tropical wet forest"
+   }
+  }
+ },
+ "th_umidade_todas": {
+  "1": {
+   "cor": "#4575b4",
+   "nome": {
+    "es": "A — Perhúmedo",
+    "pt": "A — Superúmido",
+    "en": "A — Perhumid"
+   }
+  },
+  "2": {
+   "cor": "#abd9e9",
+   "nome": {
+    "es": "B4 — Húmedo",
+    "pt": "B4 — Úmido",
+    "en": "B4 — Humid"
+   }
+  },
+  "3": {
+   "cor": "#a6d96a",
+   "nome": {
+    "es": "B3 — Húmedo",
+    "pt": "B3 — Úmido",
+    "en": "B3 — Humid"
+   }
+  },
+  "4": {
+   "cor": "#fee08b",
+   "nome": {
+    "es": "B2 — Húmedo",
+    "pt": "B2 — Úmido",
+    "en": "B2 — Humid"
+   }
+  },
+  "5": {
+   "cor": "#fec44f",
+   "nome": {
+    "es": "B1 — Húmedo",
+    "pt": "B1 — Úmido",
+    "en": "B1 — Humid"
+   }
+  },
+  "6": {
+   "cor": "#fe9929",
+   "nome": {
+    "es": "C2 — Subhúmedo húmedo",
+    "pt": "C2 — Subúmido úmido",
+    "en": "C2 — Moist subhumid"
+   }
+  },
+  "7": {
+   "cor": "#ec7014",
+   "nome": {
+    "es": "C1 — Subhúmedo seco",
+    "pt": "C1 — Subúmido seco",
+    "en": "C1 — Dry subhumid"
+   }
+  },
+  "8": {
+   "cor": "#cc4c02",
+   "nome": {
+    "es": "D — Semiárido",
+    "pt": "D — Semiárido",
+    "en": "D — Semiarid"
+   }
+  },
+  "9": {
+   "cor": "#8c2d04",
+   "nome": {
+    "es": "E — Árido",
+    "pt": "E — Árido",
+    "en": "E — Arid"
+   }
+  }
+ },
+ "th_subtipo_todas": {
+  "1": {
+   "cor": "#1a9850",
+   "nome": {
+    "es": "r — déficit hídrico nulo o pequeño",
+    "pt": "r — deficiência hídrica nula ou pequena",
+    "en": "r — little or no water deficiency"
+   }
+  },
+  "2": {
+   "cor": "#fdae61",
+   "nome": {
+    "es": "s — déficit moderado en verano",
+    "pt": "s — deficiência moderada no verão",
+    "en": "s — moderate summer water deficiency"
+   }
+  },
+  "3": {
+   "cor": "#abd9e9",
+   "nome": {
+    "es": "w — déficit moderado en invierno",
+    "pt": "w — deficiência moderada no inverno",
+    "en": "w — moderate winter water deficiency"
+   }
+  },
+  "4": {
+   "cor": "#d73027",
+   "nome": {
+    "es": "s2 — déficit grande en verano",
+    "pt": "s2 — deficiência grande no verão",
+    "en": "s2 — large summer water deficiency"
+   }
+  },
+  "5": {
+   "cor": "#4575b4",
+   "nome": {
+    "es": "w2 — déficit grande en invierno",
+    "pt": "w2 — deficiência grande no inverno",
+    "en": "w2 — large winter water deficiency"
+   }
+  },
+  "6": {
+   "cor": "#bababa",
+   "nome": {
+    "es": "d — exceso hídrico nulo o pequeño",
+    "pt": "d — excedente hídrico nulo ou pequeno",
+    "en": "d — little or no water surplus"
+   }
+  },
+  "7": {
+   "cor": "#fee090",
+   "nome": {
+    "es": "s — exceso moderado en invierno",
+    "pt": "s — excedente moderado no inverno",
+    "en": "s — moderate winter water surplus"
+   }
+  },
+  "8": {
+   "cor": "#74add1",
+   "nome": {
+    "es": "w — exceso moderado en verano",
+    "pt": "w — excedente moderado no verão",
+    "en": "w — moderate summer water surplus"
+   }
+  },
+  "9": {
+   "cor": "#f46d43",
+   "nome": {
+    "es": "s2 — exceso grande en invierno",
+    "pt": "s2 — excedente grande no inverno",
+    "en": "s2 — large winter water surplus"
+   }
+  },
+  "10": {
+   "cor": "#313695",
+   "nome": {
+    "es": "w2 — exceso grande en verano",
+    "pt": "w2 — excedente grande no verão",
+    "en": "w2 — large summer water surplus"
+   }
+  }
+ },
+ "th_termica_todas": {
+  "1": {
+   "cor": "#b2182b",
+   "nome": {
+    "es": "A' — Megatérmico",
+    "pt": "A' — Megatérmico",
+    "en": "A' — Megathermal"
+   }
+  },
+  "2": {
+   "cor": "#d6604d",
+   "nome": {
+    "es": "B'4 — Mesotérmico",
+    "pt": "B'4 — Mesotérmico",
+    "en": "B'4 — Mesothermal"
+   }
+  },
+  "3": {
+   "cor": "#f4a582",
+   "nome": {
+    "es": "B'3 — Mesotérmico",
+    "pt": "B'3 — Mesotérmico",
+    "en": "B'3 — Mesothermal"
+   }
+  },
+  "4": {
+   "cor": "#fddbc7",
+   "nome": {
+    "es": "B'2 — Mesotérmico",
+    "pt": "B'2 — Mesotérmico",
+    "en": "B'2 — Mesothermal"
+   }
+  },
+  "5": {
+   "cor": "#f7f7f7",
+   "nome": {
+    "es": "B'1 — Mesotérmico",
+    "pt": "B'1 — Mesotérmico",
+    "en": "B'1 — Mesothermal"
+   }
+  },
+  "6": {
+   "cor": "#d1e5f0",
+   "nome": {
+    "es": "C'2 — Microtérmico",
+    "pt": "C'2 — Microtérmico",
+    "en": "C'2 — Microthermal"
+   }
+  },
+  "7": {
+   "cor": "#92c5de",
+   "nome": {
+    "es": "C'1 — Microtérmico",
+    "pt": "C'1 — Microtérmico",
+    "en": "C'1 — Microthermal"
+   }
+  },
+  "8": {
+   "cor": "#4393c3",
+   "nome": {
+    "es": "D' — Tundra",
+    "pt": "D' — Tundra",
+    "en": "D' — Tundra"
+   }
+  },
+  "9": {
+   "cor": "#2166ac",
+   "nome": {
+    "es": "E' — Helado",
+    "pt": "E' — Gelo perpétuo",
+    "en": "E' — Frost"
+   }
+  }
+ },
+ "th_concentracao_todas": {
+  "1": {
+   "cor": "#8c510a",
+   "nome": {
+    "es": "a'",
+    "pt": "a'",
+    "en": "a'"
+   }
+  },
+  "2": {
+   "cor": "#bf812d",
+   "nome": {
+    "es": "b'4",
+    "pt": "b'4",
+    "en": "b'4"
+   }
+  },
+  "3": {
+   "cor": "#dfc27d",
+   "nome": {
+    "es": "b'3",
+    "pt": "b'3",
+    "en": "b'3"
+   }
+  },
+  "4": {
+   "cor": "#f6e8c3",
+   "nome": {
+    "es": "b'2",
+    "pt": "b'2",
+    "en": "b'2"
+   }
+  },
+  "5": {
+   "cor": "#c7eae5",
+   "nome": {
+    "es": "b'1",
+    "pt": "b'1",
+    "en": "b'1"
+   }
+  },
+  "6": {
+   "cor": "#80cdc1",
+   "nome": {
+    "es": "c'2",
+    "pt": "c'2",
+    "en": "c'2"
+   }
+  },
+  "7": {
+   "cor": "#35978f",
+   "nome": {
+    "es": "c'1",
+    "pt": "c'1",
+    "en": "c'1"
+   }
+  },
+  "8": {
+   "cor": "#01665e",
+   "nome": {
+    "es": "d'",
+    "pt": "d'",
+    "en": "d'"
+   }
+  }
+ }
+}
