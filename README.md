@@ -1,4 +1,4 @@
-# ClimaTec PY
+# climate_paraguay — ClimaTec PY
 
 Sitio estático con las clasificaciones climáticas del Paraguay (Köppen-Geiger, Thornthwaite y zonas de vida de
 Holdridge), calculadas píxel a píxel (~1 km) a partir de las normales 1991–2020 de CHELSA V2.1.
