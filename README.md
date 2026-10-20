@@ -106,7 +106,7 @@ climate_paraguay/
 ├── ⚙️ assets/
 │   ├── i18n.js                       # textos de la interfaz en español, portugués e inglés
 │   ├── comum.js                      # menú, navegación y formato de números
-│   ├── banner.svg                    # banner del README (colores de la bandera)
+│   ├── banner.svg                    # banner del README (franjas roja, blanca y azul)
 │   └── divisor.svg                   # franja roja, blanca y azul entre secciones
 │
 ├── 📊 dados/                         # datos que alimentan los mapas

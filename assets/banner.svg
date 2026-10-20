@@ -1,52 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="ClimaTec PY — Clasificaciones climáticas del Paraguay">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="ClimaTec PY — Köppen-Geiger, Thornthwaite, Holdridge">
   <defs>
     <clipPath id="r"><rect width="1200" height="300" rx="18"/></clipPath>
-    <linearGradient id="sombra" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#000" stop-opacity="0.10"/>
-      <stop offset="1" stop-color="#000" stop-opacity="0"/>
-    </linearGradient>
   </defs>
   <g clip-path="url(#r)">
-    <!-- franjas de la bandera: rojo, blanco, azul -->
+    <!-- franjas rojo, blanco, azul -->
     <rect width="1200" height="100" fill="#D52B1E"/>
     <rect y="100" width="1200" height="100" fill="#FFFFFF"/>
     <rect y="200" width="1200" height="100" fill="#0038A8"/>
-    <rect y="100" width="1200" height="12" fill="url(#sombra)"/>
-
-    <!-- bandera del Paraguay (izquierda) -->
-    <g transform="translate(60,62)">
-      <rect x="-6" y="-6" width="232" height="188" rx="10" fill="#FFFFFF" stroke="#1f2937" stroke-opacity="0.25"/>
-      <rect width="220" height="58.67" fill="#D52B1E"/>
-      <rect y="58.67" width="220" height="58.66" fill="#FFFFFF"/>
-      <rect y="117.33" width="220" height="58.67" fill="#0038A8"/>
-      <!-- escudo simplificado: estrella de mayo dentro de la corona de palma y olivo -->
-      <g transform="translate(110,88)">
-        <circle r="27" fill="#FFFFFF" stroke="#0038A8" stroke-width="2.5"/>
-        <path d="M-18,8 A20,20 0 0 1 -6,-19" fill="none" stroke="#2e7d32" stroke-width="4" stroke-linecap="round"/>
-        <path d="M18,8 A20,20 0 0 0 6,-19" fill="none" stroke="#2e7d32" stroke-width="4" stroke-linecap="round"/>
-        <polygon points="0,-11 2.6,-3.6 10.5,-3.4 4.2,1.4 6.5,9 0,4.5 -6.5,9 -4.2,1.4 -10.5,-3.4 -2.6,-3.6" fill="#F7C200" stroke="#a16207" stroke-width="0.8"/>
-        <circle r="23" fill="none" stroke="#D52B1E" stroke-width="1.2" stroke-dasharray="2 2.4"/>
-      </g>
-    </g>
-
-    <!-- título -->
-    <g font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif">
-      <text x="330" y="70" font-size="26" font-weight="700" fill="#FFFFFF" letter-spacing="3">REPÚBLICA DEL PARAGUAY · 1991–2020</text>
-      <text x="326" y="172" font-size="76" font-weight="800" fill="#0f172a">ClimaTec <tspan fill="#D52B1E">P</tspan><tspan fill="#0038A8">Y</tspan></text>
-      <text x="330" y="246" font-size="27" font-weight="600" fill="#FFFFFF">Köppen-Geiger · Thornthwaite · Holdridge</text>
-      <text x="330" y="278" font-size="18" fill="#dbeafe">CHELSA V2.1 · ~1 km · 218 distritos · ES · PT · EN</text>
-    </g>
-
-    <!-- detalle: termómetro y gotas a la derecha -->
-    <g transform="translate(1035,150)" fill="none" stroke-linecap="round" stroke-linejoin="round">
-      <circle r="78" fill="#FFFFFF" stroke="#D52B1E" stroke-width="6"/>
-      <circle r="66" stroke="#0038A8" stroke-width="2" stroke-dasharray="4 6"/>
-      <path d="M-14,-38 v52 a16,16 0 1 0 12,0 v-52 a6,6 0 0 0 -12,0 z" stroke="#0f172a" stroke-width="5" transform="translate(8,0)"/>
-      <circle cx="0" cy="26" r="9" fill="#D52B1E" stroke="none"/>
-      <path d="M0,22 v-46" stroke="#D52B1E" stroke-width="6"/>
-      <path d="M30,-28 c8,10 12,16 12,22 a12,12 0 0 1 -24,0 c0,-6 4,-12 12,-22 z" fill="#0038A8" stroke="none"/>
-      <path d="M-34,-6 c5,7 8,11 8,15 a8,8 0 0 1 -16,0 c0,-4 3,-8 8,-15 z" fill="#0038A8" stroke="none"/>
-    </g>
+  </g>
+  <g font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" text-anchor="middle">
+    <text x="600" y="176" font-size="80" font-weight="800" fill="#0f172a">ClimaTec <tspan fill="#D52B1E">P</tspan><tspan fill="#0038A8">Y</tspan></text>
+    <text x="600" y="246" font-size="28" font-weight="600" fill="#FFFFFF">Köppen-Geiger · Thornthwaite · Holdridge</text>
+    <text x="600" y="280" font-size="18" fill="#dbeafe">CHELSA V2.1 · 1991–2020 · ~1 km · 218 distritos · ES · PT · EN</text>
   </g>
   <rect width="1200" height="300" rx="18" fill="none" stroke="#0f172a" stroke-opacity="0.15" stroke-width="2"/>
 </svg>

@@ -171,8 +171,8 @@ function aplicarIdioma() {
   });
   document.querySelectorAll(".lang-btn").forEach(b => {
     const ativo = b.dataset.lang === LANG;
-    b.classList.toggle("bg-white", ativo); b.classList.toggle("text-emerald-800", ativo);
-    b.classList.toggle("text-emerald-100", !ativo);
+    b.classList.toggle("bg-[#0038A8]", ativo); b.classList.toggle("text-white", ativo);
+    b.classList.toggle("text-slate-600", !ativo);
   });
 }
 
