@@ -61,7 +61,11 @@ En cada mapa:
 - filtros por **departamento** y **distrito**, y control de **opacidad**;
 - al hacer clic en un distrito: **clase mayoritaria** (% del área), **índices climáticos**, **climograma mensual**
   (precipitación, ETP y temperatura media) y descarga en **CSV**;
-- enlace directo a un distrito: `mapa.html?sistema=koppen&distrito=PRY.4.1_1` (código GADM del distrito).
+- **todos los climas del distrito** con el % del área de cada uno (barra y lista; también al pasar el mouse),
+  porque muchos distritos tienen más de un clima;
+- **clima en el punto clicado**, leído en la capa de ~1 km (en Thornthwaite, el tipo climático completo del punto);
+- enlace directo a un distrito y a un punto: `mapa.html?sistema=koppen&distrito=PRY.5.3_1&ponto=-22.3,-60.9`
+  (código GADM del distrito; latitud, longitud).
 
 El **Atlas** reúne 16 mapas nacionales (clasificaciones y variables climatológicas), en los tres idiomas.
 
@@ -116,6 +120,7 @@ climate_paraguay/
 │   ├── distritos_thornthwaite.csv    # tipo climático + índices del balance hídrico por distrito
 │   ├── distritos_holdridge.csv       # zona de vida + biotemperatura y razón ETP/P por distrito
 │   ├── mensal_distritos.json         # normal mensual 1991-2020 por distrito (tas, pr, pet)
+│   ├── composicao_distritos.json     # % del área de cada clima en cada distrito, por capa
 │   ├── legendas.json                 # código → color y nombre de la clase (es/pt/en)
 │   ├── camadas.json                  # ruta y límites geográficos de cada capa PNG
 │   └── camadas/                      # clasificación píxel a píxel (PNG transparente, Web Mercator)
@@ -159,9 +164,12 @@ decimal: punto.
 
 | Archivo | Columnas específicas |
 |---|---|
-| `distritos_koppen.csv` | `koppen` (ej. `Cfa`), `koppen_id` (1–31), `t_anual`, `t_mes_frio`, `t_mes_quente` (°C), `p_anual`, `p_mes_seco`, `pet_anual` (mm) |
-| `distritos_thornthwaite.csv` | `tipo` (ej. `C2rA'a'`), `umidade_id`, `subtipo_id`, `termica_id`, `concentracao_id`, `Im`, `Ih`, `Ia` (%), `ETP_anual`, `DEF_anual`, `EXC_anual` (mm) |
-| `distritos_holdridge.csv` | `zona_id` (1–38), `biotemperatura` (°C), `P_anual`, `ETP_anual` (mm; ETP de Holdridge), `razao_ETP` |
+| `distritos_koppen.csv` | `koppen` (ej. `Cfa`), `koppen_id` (1–31), `t_anual`, `t_mes_frio`, `t_mes_quente` (°C), `p_anual`, `p_mes_seco`, `pet_anual` (mm), `composicao` (ej. `Aw 62.8% · BSh 37.2%`) |
+| `distritos_thornthwaite.csv` | `tipo` (ej. `C2rA'a'`), `umidade_id`, `subtipo_id`, `termica_id`, `concentracao_id`, `Im`, `Ih`, `Ia` (%), `ETP_anual`, `DEF_anual`, `EXC_anual` (mm), `composicao_umidade` (ej. `C2 86.0% · C1 14.0%`) |
+| `distritos_holdridge.csv` | `zona_id` (1–38), `biotemperatura` (°C), `P_anual`, `ETP_anual` (mm; ETP de Holdridge), `razao_ETP`, `composicao` (código de zona y %) |
+
+`composicao_distritos.json` — `{ "<id>": { "<capa>": [[código, %], ...] } }`, capas `koppen`, `th_umidade`,
+`th_subtipo`, `th_termica`, `th_concentracao` y `holdridge`; clases con ≥ 0,5% del área, de mayor a menor.
 
 `mensal_distritos.json` — `{ "<id>": { "tas": [12 valores, °C], "pr": [12, mm], "pet": [12, mm] } }`, de enero a
 diciembre.

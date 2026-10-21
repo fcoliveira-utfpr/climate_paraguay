@@ -127,6 +127,8 @@
                         </div>
                     </div>
                     <div id="detail-badges" class="flex flex-wrap gap-1.5 mb-3"></div>
+                    <div id="detail-ponto" class="hidden bg-blue-50 border border-blue-100 rounded-xl p-3 mb-3 text-xs"></div>
+                    <div id="detail-comp" class="mb-4"></div>
                     <div id="detail-indices" class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs mb-4"></div>
                     <h4 class="text-[10px] font-black text-blue-800 uppercase tracking-widest mb-2" data-i18n="climograma"></h4>
                     <div style="height:280px"><canvas id="climograma"></canvas></div>
@@ -173,9 +175,10 @@ const SISTEMA = SISTEMAS[params.get("sistema")] ? params.get("sistema") : "koppe
 const CFG = SISTEMAS[SISTEMA];
 const EMBED = params.get("embed") === "1";
 
-let map, overlay, distLayer, depLayer, legendaCtrl, grafico;
-let camadas = {}, legendas = {}, mensal = {}, linhas = new Map(), layerPorId = new Map();
-let camadaAtual = CFG.camadas[0], selecionado = null;
+let map, overlay, distLayer, depLayer, legendaCtrl, grafico, marcadorPonto;
+let camadas = {}, legendas = {}, mensal = {}, composicao = {}, linhas = new Map(), layerPorId = new Map();
+let camadaAtual = CFG.camadas[0], selecionado = null, pontoClicado = null;
+const pixels = {};   // camada -> {dados (RGBA), w, h}: a camada PNG de 1 km lida num canvas
 
 function setStatus(txt, cls) { const e = document.getElementById("map-status"); e.textContent = txt; e.className = `text-[10px] text-center py-1.5 px-2 rounded-lg font-bold ${cls}`; }
 const nomeCamada = c => NOME_CAMADA[c].startsWith("th_") ? `Thornthwaite — ${t(NOME_CAMADA[c])}` : NOME_CAMADA[c];
@@ -230,19 +233,107 @@ function desenharDistritos(geo) {
             layer.bindTooltip(() => tooltipDistrito(id), { sticky: true, className: "custom-tooltip" });
             layer.on("mouseover", () => { if (id !== selecionado) layer.setStyle({ weight: 1.5, color: "#000" }); });
             layer.on("mouseout", () => { if (id !== selecionado) layer.setStyle(estiloDist); });
-            layer.on("click", () => selecionarDistrito(id, false));
+            layer.on("click", e => { pontoClicado = e.latlng; selecionarDistrito(id, false); });
         },
     }).addTo(map);
 }
 
+// Composição do distrito na camada atual: [[codigo, pct], ...]
+const compDistrito = id => (composicao[id] && composicao[id][camadaAtual]) || [];
+const legTodas = () => legendas[camadaAtual + "_todas"] || {};
+
 function tooltipDistrito(id) {
     const r = linhas.get(id);
     if (!r) return id;
-    const c = CFG.classe(r);
-    const leg = legendas[c.legenda][String(c.id)];
-    const cl = c.tipo ? c.tipo : (leg ? leg.nome[LANG] : t("sin_datos"));
-    return `<div style="text-align:left"><b style="color:#1e3a8a">${t("distrito")}:</b> ${r.distrito}<br>
-            <b style="color:#1e3a8a">${t("departamento")}:</b> ${r.departamento}<br><b style="color:#1e3a8a">${CFG.titulo}:</b> ${cl}</div>`;
+    const leg = legTodas();
+    const linhasComp = compDistrito(id).map(([c, p]) => {
+        const v = leg[String(c)];
+        return `<div style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;min-width:10px;background:${v ? v.cor : "#ccc"};border:1px solid #333;border-radius:2px"></span>
+                <span>${v ? v.nome[LANG] : c}</span><b style="margin-left:auto;padding-left:8px">${fmt(p, 0)}%</b></div>`;
+    }).join("");
+    return `<div style="text-align:left;min-width:180px"><b style="color:#1e3a8a">${r.distrito}</b> <span style="color:#64748b">· ${r.departamento}</span>
+            <div style="font-size:10px;font-weight:700;color:#1e3a8a;text-transform:uppercase;margin:4px 0 2px">${nomeCamada(camadaAtual)}</div>${linhasComp || t("sin_datos")}</div>`;
+}
+
+// ==========================================
+// CLIMA NO PONTO CLICADO (pixel de 1 km, lido da camada PNG)
+// ==========================================
+function carregarPixels(camada) {
+    if (pixels[camada]) return pixels[camada].pronto;
+    const img = new Image();
+    const pronto = new Promise(res => {
+        img.onload = () => {
+            const cv = document.createElement("canvas");
+            cv.width = img.naturalWidth; cv.height = img.naturalHeight;
+            const ctx = cv.getContext("2d", { willReadFrequently: true });
+            ctx.drawImage(img, 0, 0);
+            Object.assign(pixels[camada], { dados: ctx.getImageData(0, 0, cv.width, cv.height).data, w: cv.width, h: cv.height });
+            res();
+        };
+        img.onerror = () => res();
+    });
+    pixels[camada] = { pronto };
+    img.src = camadas[camada].png;
+    return pronto;
+}
+
+const yMerc = lat => Math.log(Math.tan(Math.PI / 4 + lat * Math.PI / 360));
+const hex = (r, g, b) => "#" + [r, g, b].map(v => v.toString(16).padStart(2, "0")).join("");
+
+// Código da classe da camada no ponto (0 = fora da área classificada). O PNG está em Web Mercator.
+function classeNoPonto(camada, latlng) {
+    const px = pixels[camada];
+    if (!px || !px.dados) return null;
+    const [[lat0, lon0], [lat1, lon1]] = camadas[camada].limites;
+    const x = Math.floor((latlng.lng - lon0) / (lon1 - lon0) * px.w);
+    const y = Math.floor((yMerc(lat1) - yMerc(latlng.lat)) / (yMerc(lat1) - yMerc(lat0)) * px.h);
+    if (x < 0 || y < 0 || x >= px.w || y >= px.h) return 0;
+    const i = 4 * (y * px.w + x), d = px.dados;
+    if (d[i + 3] === 0) return 0;
+    const cor = hex(d[i], d[i + 1], d[i + 2]);
+    const achado = Object.entries(legendas[camada]).find(([, v]) => v.cor.toLowerCase() === cor);
+    return achado ? Number(achado[0]) : 0;
+}
+
+async function renderPonto() {
+    const box = document.getElementById("detail-ponto");
+    if (marcadorPonto) { map.removeLayer(marcadorPonto); marcadorPonto = null; }
+    if (!pontoClicado) { box.classList.add("hidden"); return; }
+    marcadorPonto = L.circleMarker(pontoClicado, { radius: 6, color: "#fff", weight: 2, fillColor: "#D52B1E", fillOpacity: 1, interactive: false }).addTo(map);
+    await Promise.all(CFG.camadas.map(carregarPixels));
+    const coord = `${fmt(pontoClicado.lat, 3)}°, ${fmt(pontoClicado.lng, 3)}°`;
+    let h = `<div class="text-[10px] font-black text-blue-800 uppercase tracking-widest mb-1">${t("clima_punto")} <span class="font-semibold normal-case tracking-normal text-slate-500">(${coord} · ~1 km)</span></div>`;
+    const cod = classeNoPonto(camadaAtual, pontoClicado);
+    if (!cod) { h += `<span class="text-slate-500">${t("fuera_area")}</span>`; }
+    else {
+        const v = legendas[camadaAtual][String(cod)];
+        if (SISTEMA === "thornthwaite") {
+            // tipo completo = letras das 4 camadas no ponto (nome da legenda começa pela letra: "C2 — ...")
+            const tipo = CFG.camadas.map(c => (legendas[c][String(classeNoPonto(c, pontoClicado))] || { nome: { es: "" } }).nome.es.split(" — ")[0]).join("");
+            h += badge(`${t("tipo_completo")}: ${tipo}`, "#e2e8f0") + " ";
+        }
+        h += badge(v.nome[LANG], v.cor);
+    }
+    box.innerHTML = h;
+    box.classList.remove("hidden");
+}
+
+function renderComposicao() {
+    const comp = compDistrito(selecionado), leg = legTodas();
+    if (!comp.length) { document.getElementById("detail-comp").innerHTML = ""; return; }
+    const barra = comp.map(([c, p]) => {
+        const v = leg[String(c)];
+        return `<div title="${v ? v.nome[LANG] : c}: ${fmt(p, 1)}%" style="width:${p}%;background:${v ? v.cor : "#ccc"}"></div>`;
+    }).join("");
+    const lista = comp.map(([c, p]) => {
+        const v = leg[String(c)];
+        return `<div class="flex items-center gap-1.5"><span style="width:10px;height:10px;min-width:10px;background:${v ? v.cor : "#ccc"};border:1px solid #333;border-radius:2px"></span>
+                <span class="text-slate-700">${v ? v.nome[LANG] : c}</span><b class="ml-auto pl-2 text-slate-800">${fmt(p, 1)}%</b></div>`;
+    }).join("");
+    document.getElementById("detail-comp").innerHTML =
+        `<div class="text-[10px] font-black text-blue-800 uppercase tracking-widest mb-1">${t("composicion")} — ${nomeCamada(camadaAtual)}</div>
+         <div class="flex h-4 rounded-md overflow-hidden border border-slate-300 mb-2">${barra}</div>
+         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-xs">${lista}</div>`;
 }
 
 // ==========================================
@@ -307,6 +398,8 @@ function renderDetalhe() {
     document.getElementById("detail-badges").innerHTML = b;
     document.getElementById("detail-indices").innerHTML =
         CFG.indices.map(([k, col, d, un]) => cartao(t(k), fmt(r[col], d), un)).join("");
+    renderComposicao();
+    renderPonto();
     renderGrafico();
 }
 
@@ -336,6 +429,8 @@ function fecharDetalhe() {
     document.getElementById("detail-panel").classList.remove("open");
     if (selecionado && layerPorId.get(selecionado)) layerPorId.get(selecionado).setStyle(estiloDist);
     selecionado = null;
+    pontoClicado = null;
+    if (marcadorPonto) { map.removeLayer(marcadorPonto); marcadorPonto = null; }
     document.getElementById("distSelect").value = "";
 }
 
@@ -363,15 +458,16 @@ function baixarCSV() {
 async function carregar() {
     setStatus(t("cargando"), "bg-yellow-100 text-yellow-800");
     try {
-        const [cam, leg, men, geo, dep, csv] = await Promise.all([
+        const [cam, leg, men, comp, geo, dep, csv] = await Promise.all([
             fetch("dados/camadas.json").then(r => r.json()),
             fetch("dados/legendas.json").then(r => r.json()),
             fetch("dados/mensal_distritos.json").then(r => r.json()),
+            fetch("dados/composicao_distritos.json").then(r => r.json()),
             fetch("dados/distritos.geojson").then(r => r.json()),
             fetch("dados/departamentos.geojson").then(r => r.json()),
             fetch(CFG.csv).then(r => r.text()),
         ]);
-        camadas = cam; legendas = leg; mensal = men;
+        camadas = cam; legendas = leg; mensal = men; composicao = comp;
         Papa.parse(csv, { header: true, skipEmptyLines: true, dynamicTyping: true }).data.forEach(r => linhas.set(r.id, r));
         mostrarCamada(camadaAtual);
         desenharDistritos(geo);
@@ -379,7 +475,8 @@ async function carregar() {
         map.fitBounds(depLayer.getBounds(), { padding: [10, 10] });
         preencherCamadas(); preencherDepartamentos(); preencherDistritos();
         setStatus(`${CFG.titulo} — ${t("listo")}`, "bg-blue-100 text-blue-800");
-        const d = params.get("distrito");
+        const d = params.get("distrito"), p = (params.get("ponto") || "").split(",").map(Number);
+        if (p.length === 2 && p.every(Number.isFinite)) pontoClicado = L.latLng(p[0], p[1]);
         if (d && linhas.has(d)) selecionarDistrito(d, true);
     } catch (e) {
         console.error(e);
@@ -391,7 +488,10 @@ async function carregar() {
 // ==========================================
 // EVENTOS
 // ==========================================
-document.getElementById("camadaSelect").addEventListener("change", e => mostrarCamada(e.target.value));
+document.getElementById("camadaSelect").addEventListener("change", e => {
+    mostrarCamada(e.target.value);
+    if (selecionado) { renderComposicao(); renderPonto(); }
+});
 document.getElementById("opacidade").addEventListener("input", e => {
     document.getElementById("opac-val").textContent = e.target.value;
     if (overlay) overlay.setOpacity(opacidade());
@@ -404,7 +504,9 @@ document.getElementById("depSelect").addEventListener("change", e => {
     distLayer.eachLayer(l => { if (l.feature.properties.departamento === dep) camadasDep.push(l); });
     if (camadasDep.length) map.fitBounds(L.featureGroup(camadasDep).getBounds());
 });
-document.getElementById("distSelect").addEventListener("change", e => { if (e.target.value) selecionarDistrito(e.target.value, true); });
+document.getElementById("distSelect").addEventListener("change", e => {
+    if (e.target.value) { pontoClicado = null; selecionarDistrito(e.target.value, true); }
+});
 
 document.addEventListener("idioma", () => {
     document.getElementById("subtitulo-sistema").textContent = CFG.titulo;
