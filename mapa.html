@@ -230,8 +230,16 @@ function desenharDistritos(geo) {
         onEachFeature: (f, layer) => {
             const id = f.properties.id;
             layerPorId.set(id, layer);
-            layer.bindTooltip(() => tooltipDistrito(id), { sticky: true, className: "custom-tooltip" });
-            layer.on("mouseover", () => { if (id !== selecionado) layer.setStyle({ weight: 1.5, color: "#000" }); });
+            layer.bindTooltip("", { sticky: true, className: "custom-tooltip" });
+            let quadro = null;
+            layer.on("mousemove", e => {   // atualiza a dica com o clima do pixel sob o mouse (1 por quadro)
+                if (quadro) return;
+                quadro = requestAnimationFrame(() => { quadro = null; layer.setTooltipContent(tooltipDistrito(id, e.latlng)); });
+            });
+            layer.on("mouseover", e => {
+                layer.setTooltipContent(tooltipDistrito(id, e.latlng));
+                if (id !== selecionado) layer.setStyle({ weight: 1.5, color: "#000" });
+            });
             layer.on("mouseout", () => { if (id !== selecionado) layer.setStyle(estiloDist); });
             layer.on("click", e => { pontoClicado = e.latlng; selecionarDistrito(id, false); });
         },
@@ -242,17 +250,29 @@ function desenharDistritos(geo) {
 const compDistrito = id => (composicao[id] && composicao[id][camadaAtual]) || [];
 const legTodas = () => legendas[camadaAtual + "_todas"] || {};
 
-function tooltipDistrito(id) {
+function tooltipDistrito(id, latlng) {
     const r = linhas.get(id);
     if (!r) return id;
     const leg = legTodas();
+    // clima no ponto sob o mouse (camada de ~1 km)
+    let aqui = "";
+    const cod = latlng ? classeNoPonto(camadaAtual, latlng) : null;
+    if (cod) {
+        const v = legendas[camadaAtual][String(cod)];
+        let tipo = "";
+        if (SISTEMA === "thornthwaite") tipo = CFG.camadas.map(c => (legendas[c][String(classeNoPonto(c, latlng))] || { nome: { es: "" } }).nome.es.split(" — ")[0]).join("");
+        aqui = `<div style="margin:4px 0 2px;padding:4px 6px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:6px">
+            <div style="font-size:10px;font-weight:700;color:#1e3a8a;text-transform:uppercase">${t("clima_aqui")}</div>
+            <div style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;min-width:10px;background:${v.cor};border:1px solid #333;border-radius:2px"></span>
+            <b>${v.nome[LANG]}</b>${tipo ? ` <span style="color:#475569">(${tipo})</span>` : ""}</div></div>`;
+    }
     const linhasComp = compDistrito(id).map(([c, p]) => {
         const v = leg[String(c)];
         return `<div style="display:flex;align-items:center;gap:5px"><span style="width:10px;height:10px;min-width:10px;background:${v ? v.cor : "#ccc"};border:1px solid #333;border-radius:2px"></span>
                 <span>${v ? v.nome[LANG] : c}</span><b style="margin-left:auto;padding-left:8px">${fmt(p, 0)}%</b></div>`;
     }).join("");
     return `<div style="text-align:left;min-width:180px"><b style="color:#1e3a8a">${r.distrito}</b> <span style="color:#64748b">· ${r.departamento}</span>
-            <div style="font-size:10px;font-weight:700;color:#1e3a8a;text-transform:uppercase;margin:4px 0 2px">${nomeCamada(camadaAtual)}</div>${linhasComp || t("sin_datos")}</div>`;
+            ${aqui}<div style="font-size:10px;font-weight:700;color:#1e3a8a;text-transform:uppercase;margin:4px 0 2px">${t("composicion")} — ${nomeCamada(camadaAtual)}</div>${linhasComp || t("sin_datos")}</div>`;
 }
 
 // ==========================================
@@ -325,15 +345,9 @@ function renderComposicao() {
         const v = leg[String(c)];
         return `<div title="${v ? v.nome[LANG] : c}: ${fmt(p, 1)}%" style="width:${p}%;background:${v ? v.cor : "#ccc"}"></div>`;
     }).join("");
-    const lista = comp.map(([c, p]) => {
-        const v = leg[String(c)];
-        return `<div class="flex items-center gap-1.5"><span style="width:10px;height:10px;min-width:10px;background:${v ? v.cor : "#ccc"};border:1px solid #333;border-radius:2px"></span>
-                <span class="text-slate-700">${v ? v.nome[LANG] : c}</span><b class="ml-auto pl-2 text-slate-800">${fmt(p, 1)}%</b></div>`;
-    }).join("");
     document.getElementById("detail-comp").innerHTML =
         `<div class="text-[10px] font-black text-blue-800 uppercase tracking-widest mb-1">${t("composicion")} — ${nomeCamada(camadaAtual)}</div>
-         <div class="flex h-4 rounded-md overflow-hidden border border-slate-300 mb-2">${barra}</div>
-         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-xs">${lista}</div>`;
+         <div class="flex h-4 rounded-md overflow-hidden border border-slate-300">${barra}</div>`;
 }
 
 // ==========================================
@@ -387,15 +401,12 @@ function renderDetalhe() {
     const r = linhas.get(selecionado);
     document.getElementById("detail-title").textContent = r.distrito;
     document.getElementById("detail-subtitle").textContent = `${r.departamento} · GADM ${r.id}`;
-    const c = CFG.classe(r);
-    const leg = legendas[c.legenda][String(c.id)];
-    let b = "";
-    if (leg) {
-        if (c.tipo) b += badge(`${t("tipo_completo")}: ${c.tipo}`, "#e2e8f0");
-        b += badge(leg.nome[LANG], leg.cor);
-        b += `<span class="text-[11px] text-slate-500 self-center">${t("clase_mayoritaria")}: ${fmt(r.pct_area, 0)}% ${t("del_area")}</span>`;
-    } else b = `<span class="text-xs text-slate-400">${t("sin_datos")}</span>`;
-    document.getElementById("detail-badges").innerHTML = b;
+    // Todos os climas do distrito na camada atual, com a % da área de cada um
+    const c = CFG.classe(r), leg = legTodas(), comp = compDistrito(selecionado);
+    let b = c.tipo ? badge(`${t("tipo_completo")} (${t("clase_mayoritaria").toLowerCase()}): ${c.tipo}`, "#e2e8f0") : "";
+    b += comp.map(([cod, pct]) => { const v = leg[String(cod)];
+        return v ? badge(`${v.nome[LANG]} · ${fmt(pct, 1)}%`, v.cor) : ""; }).join("");
+    document.getElementById("detail-badges").innerHTML = b || `<span class="text-xs text-slate-400">${t("sin_datos")}</span>`;
     document.getElementById("detail-indices").innerHTML =
         CFG.indices.map(([k, col, d, un]) => cartao(t(k), fmt(r[col], d), un)).join("");
     renderComposicao();
@@ -470,6 +481,7 @@ async function carregar() {
         camadas = cam; legendas = leg; mensal = men; composicao = comp;
         Papa.parse(csv, { header: true, skipEmptyLines: true, dynamicTyping: true }).data.forEach(r => linhas.set(r.id, r));
         mostrarCamada(camadaAtual);
+        CFG.camadas.forEach(carregarPixels);
         desenharDistritos(geo);
         depLayer = L.geoJSON(dep, { style: { color: "#111", weight: 1.4, fill: false }, interactive: false }).addTo(map);
         map.fitBounds(depLayer.getBounds(), { padding: [10, 10] });
@@ -490,7 +502,7 @@ async function carregar() {
 // ==========================================
 document.getElementById("camadaSelect").addEventListener("change", e => {
     mostrarCamada(e.target.value);
-    if (selecionado) { renderComposicao(); renderPonto(); }
+    if (selecionado) renderDetalhe();
 });
 document.getElementById("opacidade").addEventListener("input", e => {
     document.getElementById("opac-val").textContent = e.target.value;
