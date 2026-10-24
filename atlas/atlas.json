@@ -173,6 +173,70 @@
      "largo": false
     }
    ]
+  },
+  {
+   "id": "validacion",
+   "titulo": {
+    "es": "Validación e incertidumbre",
+    "pt": "Validação e incerteza",
+    "en": "Validation and uncertainty"
+   },
+   "figuras": [
+    {
+     "arquivo": "fig_val_estaciones.png",
+     "legenda": {
+      "es": "Sesgo medio de la temperatura mensual del CHELSA respecto de 23 estaciones (GHCN-Daily, 1991–2020, mismos meses). El CHELSA es más frío en 22 de las 23 estaciones.",
+      "pt": "Viés médio da temperatura mensal do CHELSA em relação a 23 estações (GHCN-Daily, 1991–2020, mesmos meses). O CHELSA é mais frio em 22 das 23 estações.",
+      "en": "Mean bias of CHELSA monthly temperature against 23 stations (GHCN-Daily, 1991–2020, matching months). CHELSA is colder at 22 of the 23 stations."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_val_beck.png",
+     "legenda": {
+      "es": "Köppen-Geiger 1991–2020 de Beck et al. (2023), V2, 1 km. Concordancia con el mapa de este trabajo: 85.4% del área (88.6% en los grupos principales).",
+      "pt": "Köppen-Geiger 1991–2020 de Beck et al. (2023), V2, 1 km. Concordância com o mapa deste trabalho: 85.4% da área (88.6% nos grupos principais).",
+      "en": "Köppen-Geiger 1991–2020 by Beck et al. (2023), V2, 1 km. Agreement with this map: 85.4% of the area (88.6% for the main groups)."
+     },
+     "largo": true
+    },
+    {
+     "arquivo": "fig_estabilidad_koppen.png",
+     "legenda": {
+      "es": "Estabilidad interanual de la clase, Köppen-Geiger (1991–2020): porcentaje de años clasificados en la misma clase que la normal 1991–2020 (media 45%).",
+      "pt": "Estabilidade interanual da classe, Köppen-Geiger (1991–2020): porcentagem de anos classificados na mesma classe da normal 1991–2020 (média 45%).",
+      "en": "Interannual class stability, Köppen-Geiger (1991–2020): percentage of years classified in the same class as the 1991–2020 normal (mean 45%)."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_estabilidad_umidade.png",
+     "legenda": {
+      "es": "Estabilidad interanual de la clase, Thornthwaite (humedad) (1991–2018): porcentaje de años clasificados en la misma clase que la normal 1991–2020 (media 59%).",
+      "pt": "Estabilidade interanual da classe, Thornthwaite (umidade) (1991–2018): porcentagem de anos classificados na mesma classe da normal 1991–2020 (média 59%).",
+      "en": "Interannual class stability, Thornthwaite (moisture) (1991–2018): percentage of years classified in the same class as the 1991–2020 normal (mean 59%)."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_estabilidad_zona.png",
+     "legenda": {
+      "es": "Estabilidad interanual de la clase, Holdridge (1991–2020): porcentaje de años clasificados en la misma clase que la normal 1991–2020 (media 76%). Bosque seco subtropical de Holdridge × ecorregión Chaco Seco (RESOLVE 2017): correspondencia de 92.6% del área; 93.8% del Chaco Seco es bosque seco.",
+      "pt": "Estabilidade interanual da classe, Holdridge (1991–2020): porcentagem de anos classificados na mesma classe da normal 1991–2020 (média 76%). Floresta seca subtropical de Holdridge × ecorregião Chaco Seco (RESOLVE 2017): correspondência de 92.6% da área; 93.8% do Chaco Seco é floresta seca.",
+      "en": "Interannual class stability, Holdridge (1991–2020): percentage of years classified in the same class as the 1991–2020 normal (mean 76%). Holdridge subtropical dry forest × Dry Chaco ecoregion (RESOLVE 2017): 92.6% area correspondence; 93.8% of the Dry Chaco is dry forest."
+     },
+     "largo": false
+    },
+    {
+     "arquivo": "fig_sensibilidad.png",
+     "legenda": {
+      "es": "Sensibilidad de las clasificaciones: porcentaje del área del país que cambia de clase al perturbar la temperatura, la precipitación, la CAD o el método de la ETP.",
+      "pt": "Sensibilidade das classificações: porcentagem da área do país que muda de classe ao perturbar a temperatura, a precipitação, a CAD ou o método da ETP.",
+      "en": "Sensitivity of the classifications: percentage of the country's area that changes class when temperature, precipitation, available water capacity or the PET method are perturbed."
+     },
+     "largo": false
+    }
+   ]
   }
  ]
 }
